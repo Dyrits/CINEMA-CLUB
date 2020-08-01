@@ -15,18 +15,18 @@ class Movie:
         return self.title
 
     def add_to_movies(self):
-        movies = Movie.get_movies()
-        if self.title not in movies:
-            movies.append(self.title)
-            Movie.write_movies(movies)
+        movies_titles = Movie.get_movies_titles()
+        if self.title not in movies_titles:
+            movies_titles.append(self.title)
+            Movie.write_movies(movies_titles)
         else:
             logging.warning(f"The movie {self.title} already exists.")
 
     def remove_from_movies(self):
-        movies = Movie.get_movies()
-        if self.title in movies:
-            movies.remove(self.title)
-            Movie.write_movies(movies)
+        movies_titles = Movie.get_movies_titles()
+        if self.title in movies_titles:
+            movies_titles.remove(self.title)
+            Movie.write_movies(movies_titles)
         else:
             logging.warning(f"The movie {self.title} does not exist.")
 
@@ -36,9 +36,13 @@ class Movie:
             json.dump(movies, json_file, indent = 4)
 
     @classmethod
-    def get_movies(cls):
+    def get_movies_titles(cls):
         with open(DATA_FILE, 'r') as json_file:
             return json.load(json_file)
+
+    @classmethod
+    def get_movies(cls):
+        return [Movie(movie_title) for movie_title in Movie.get_movies_titles()]
 
 
 def test_function():
@@ -46,6 +50,7 @@ def test_function():
     harry_potter.add_to_movies()
     marry_poppins = Movie("Marry Poppins")
     marry_poppins.remove_from_movies()
+    print(Movie.get_movies_titles())
     print(Movie.get_movies())
 
 

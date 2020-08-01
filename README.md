@@ -14,7 +14,8 @@ This project has been made from scratch following specific instructions.
 The original project can be found on GitHub : [API](https://github.com/DocstringFr/la-formation-complete-python/tree/master/prj-002_cineclub-api) | [GUI](https://github.com/DocstringFr/la-formation-complete-python/tree/master/prj-002_cineclub-gui).
 
 ### Status
-V0.40 - In progress
+API - Completed  
+V0.5 - In progress
 
 #### Last update
 01/08/2020  
