@@ -3,7 +3,7 @@
 ## About this project
 
 ### Related course
-Udemy | La Formation Complète Python  ~ # Projet 01 - Convertisseur de devises   
+Udemy | La Formation Complète Python  ~ # Projet 02 - Créer un ciné club
 
 ### Main technology | GUI toolkit
 - Python
@@ -15,8 +15,8 @@ The original project can be found on GitHub : [API](https://github.com/Docstring
 
 ### Status
 API - Completed  
-V0.5 - In progress
+GUI - Completed
 
 #### Last update
-01/08/2020  
-(README | 01/05/2020)
+10/10/2020  
+(README | 10/10/2020)
