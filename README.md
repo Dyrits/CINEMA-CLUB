@@ -13,8 +13,8 @@ Made from scratch following specific instructions. The original project can be f
 
 ## Status
 
-API - Completed
-GUI - Completed
+- API - Completed
+- GUI - Completed
 
 ## License
 
